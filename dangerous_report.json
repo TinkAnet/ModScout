@@ -1,0 +1,432 @@
+{
+  "generated_at": "2025-10-28T05:40:26.581790Z",
+  "roots": [
+    "random",
+    "scipy"
+  ],
+  "rules": [
+    {
+      "type": "category",
+      "category": "dangerous"
+    },
+    {
+      "type": "qualname_regex",
+      "pattern": "(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$"
+    },
+    {
+      "type": "qualname_regex",
+      "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+    },
+    {
+      "type": "module_startswith",
+      "pattern": "http"
+    },
+    {
+      "type": "module_startswith",
+      "pattern": "urllib"
+    },
+    {
+      "type": "module_startswith",
+      "pattern": "xmlrpc"
+    }
+  ],
+  "scan": {
+    "max_depth": 6,
+    "max_objects": 120000,
+    "prune_dunders": true,
+    "risk_getattr": false,
+    "follow_classes": true,
+    "follow_instances": false,
+    "exclude_module_prefixes": [
+      "numpy",
+      "pandas",
+      "torch",
+      "tensorflow"
+    ]
+  },
+  "summary": {
+    "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/": 13,
+    "path matches /(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$/": 5
+  },
+  "total_matches": 18,
+  "findings": [
+    {
+      "path": "random._os.open",
+      "name": "open",
+      "depth": 2,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._pep440.re.compile",
+      "name": "compile",
+      "depth": 4,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "re",
+        "qualname": "compile",
+        "name": "compile",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._importlib._bootstrap_external._os.open",
+      "name": "open",
+      "depth": 4,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._importlib._bootstrap_external._io.open",
+      "name": "open",
+      "depth": 4,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "_io",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._pep440.re._compiler.compile",
+      "name": "compile",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "re._compiler",
+        "qualname": "compile",
+        "name": "compile",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._pep440.re._sre.compile",
+      "name": "compile",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "_sre",
+        "qualname": "compile",
+        "name": "compile",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.exec",
+      "name": "exec",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "exec",
+        "name": "exec",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.exec",
+      "name": "exec",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "exec",
+        "name": "exec",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.input",
+      "name": "input",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "input",
+        "name": "input",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.input",
+      "name": "input",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "input",
+        "name": "input",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.open",
+      "name": "open",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "_io",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.open",
+      "name": "open",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "_io",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.compile",
+      "name": "compile",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "compile",
+        "name": "compile",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.compile",
+      "name": "compile",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "compile",
+        "name": "compile",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.eval",
+      "name": "eval",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "eval",
+        "name": "eval",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.builtins.eval",
+      "name": "eval",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "builtins",
+        "qualname": "eval",
+        "name": "eval",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.subprocess.io.open",
+      "name": "open",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "_io",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "scipy._lib._testutils.inspect.tokenize.open",
+      "name": "open",
+      "depth": 5,
+      "match": {
+        "kind": "qualname_regex",
+        "reason": "path matches /(^|\\.)(eval|exec|compile|open|__import__|input)$/",
+        "rule": {
+          "type": "qualname_regex",
+          "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "tokenize",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    }
+  ]
+}

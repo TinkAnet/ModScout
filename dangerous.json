@@ -1,0 +1,54 @@
+{
+  "roots": ["random","scipy"],
+  "rules": [
+    { "type": "category", "category": "dangerous" },
+    { "type": "qualname_regex", "pattern": "(^|\\.)builtins\\.(eval|exec|compile|open|__import__|input)$" },
+    { "type": "qualname_regex", "pattern": "(^|\\.)(eval|exec|compile|open|__import__|input)$" },
+    { "type": "module_startswith", "pattern": "http" },
+    { "type": "module_startswith", "pattern": "urllib" },
+    { "type": "module_startswith", "pattern": "xmlrpc" }
+  ],
+  "categories": {
+    "dangerous": {
+      "modules": [
+        "os", "sys", "subprocess", "ctypes", "multiprocessing", "threading",
+        "socket", "ssl", "http", "http.client", "http.server",
+        "urllib", "urllib.request", "urllib.response", "urllib.error", "urllib.parse",
+        "ftplib", "telnetlib", "smtplib", "poplib", "imaplib",
+        "xmlrpc", "xmlrpc.client", "xmlrpc.server",
+        "asyncio", "selectors", "select",
+        "shutil", "tarfile", "zipfile", "tempfile", "pathlib", "glob", "fnmatch",
+        "signal", "resource", "fcntl", "pty", "mmap",
+        "uuid", "platform", "getpass", "webbrowser",
+        "importlib", "importlib.util", "importlib.machinery",
+        "runpy", "site", "pkgutil", "venv", "zipimport",
+        "builtins", "marshal", "pickle", "dbm", "dbm.ndbm", "dbm.gnu", "dbm.dumb", "shelve",
+        "winsound", "winreg"
+      ],
+      "callables": [
+        "system", "popen", "Popen", "run", "call", "check_call", "check_output",
+        "spawn", "spawnl", "spawnle", "spawnlp", "spawnlpe", "spawnv", "spawnve", "spawnvp", "spawnvpe",
+        "execv", "execve", "execl", "execlp", "execlpe", "execvp", "execvpe",
+        "fork", "forkpty",
+        "open", "unlink", "remove", "rename", "replace", "rmdir", "rmtree",
+        "mkfifo", "mknod", "symlink", "link", "chmod", "chown", "lchown", "chroot", "truncate",
+        "socket", "create_connection", "create_server",
+        "__import__", "reload", "exec", "eval", "compile",
+        "load", "loads", "dump", "dumps"
+      ]
+    }
+  },
+  "scan": {
+    "max_depth": 6,
+    "max_objects": 120000,
+    "prune_dunders": true,
+    "risk_getattr": false,
+    "follow_classes": true,
+    "follow_instances": false,
+    "exclude_module_prefixes": ["numpy", "pandas", "torch", "tensorflow"]
+  },
+  "output": {
+    "json_path": "dangerous_report.json",
+    "limit": 10000
+  }
+}

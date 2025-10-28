@@ -1,0 +1,104 @@
+{
+  "roots": [
+    "random"
+  ],
+  "rules": [
+    {
+      "type": "category",
+      "category": "system"
+    },
+    {
+      "type": "category",
+      "category": "builtin"
+    },
+    {
+      "type": "qualname_regex",
+      "pattern": "random\\._os\\.(system|popen|Popen|fork)"
+    }
+  ],
+  "categories": {
+    "system": {
+      "modules": [
+        "atexit",
+        "ctypes",
+        "fcntl",
+        "ftplib",
+        "http",
+        "importlib",
+        "multiprocessing",
+        "os",
+        "pathlib",
+        "platform",
+        "pty",
+        "resource",
+        "select",
+        "selectors",
+        "shlex",
+        "shutil",
+        "signal",
+        "socket",
+        "ssl",
+        "subprocess",
+        "sys",
+        "telnetlib",
+        "tempfile",
+        "uuid",
+        "winreg"
+      ],
+      "callables": [
+        "Popen",
+        "call",
+        "check_call",
+        "check_output",
+        "chmod",
+        "chown",
+        "execl",
+        "execlp",
+        "execlpe",
+        "execv",
+        "execve",
+        "execvp",
+        "execvpe",
+        "fork",
+        "forkpty",
+        "mkfifo",
+        "mknod",
+        "open",
+        "popen",
+        "remove",
+        "rmdir",
+        "rmtree",
+        "run",
+        "spawn",
+        "spawnl",
+        "spawnle",
+        "spawnlp",
+        "spawnlpe",
+        "spawnv",
+        "spawnve",
+        "spawnvp",
+        "spawnvpe",
+        "system",
+        "unlink"
+      ]
+    }
+  },
+  "scan": {
+    "max_depth": 4,
+    "max_objects": 60000,
+    "prune_dunders": true,
+    "risk_getattr": false,
+    "follow_classes": true,
+    "follow_instances": false,
+    "exclude_module_prefixes": [
+      "numpy",
+      "pandas",
+      "torch",
+      "tensorflow"
+    ]
+  },
+  "output": {
+    "json_path": "modscan_report.json",
+    "limit": 2000
+  }
+}

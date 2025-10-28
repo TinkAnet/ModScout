@@ -1,0 +1,38 @@
+{
+  "roots": ["random","math","scipy"],
+  "rules": [
+    { "type": "callable_name", "pattern": "type" },
+    { "type": "attr_name",     "pattern": "type" },
+
+    { "type": "callable_name", "pattern": "bytearray" },
+    { "type": "attr_name",     "pattern": "bytearray" },
+
+    { "type": "callable_name", "pattern": "id" },
+    { "type": "attr_name",     "pattern": "id" },
+
+    { "type": "callable_name", "pattern": "bytes" },
+    { "type": "attr_name",     "pattern": "bytes" },
+
+    { "type": "module_name",       "pattern": "ctypes" },
+    { "type": "module_startswith", "pattern": "ctypes" },
+
+    { "type": "qualname_regex", "pattern": "(^|\\.)type$" },
+    { "type": "qualname_regex", "pattern": "(^|\\.)bytearray$" },
+    { "type": "qualname_regex", "pattern": "(^|\\.)id$" },
+    { "type": "qualname_regex", "pattern": "(^|\\.)bytes$" },
+    { "type": "qualname_regex", "pattern": "(^|\\.)ctypes(\\.|$)" }
+  ],
+  "scan": {
+    "max_depth": 5,
+    "max_objects": 60000,
+    "prune_dunders": true,
+    "risk_getattr": false,
+    "follow_classes": true,
+    "follow_instances": false,
+    "exclude_module_prefixes": ["numpy", "pandas", "torch", "tensorflow"]
+  },
+  "output": {
+    "json_path": "targets_report.json",
+    "limit": 5000
+  }
+}

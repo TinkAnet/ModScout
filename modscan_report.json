@@ -1,0 +1,667 @@
+{
+  "generated_at": "2025-10-28T05:47:47.990154Z",
+  "roots": [
+    "random"
+  ],
+  "rules": [
+    {
+      "type": "category",
+      "category": "system"
+    },
+    {
+      "type": "category",
+      "category": "builtin"
+    }
+  ],
+  "scan": {
+    "max_depth": 4,
+    "max_objects": 60000,
+    "prune_dunders": true,
+    "risk_getattr": false,
+    "follow_classes": true,
+    "follow_instances": false,
+    "exclude_module_prefixes": [
+      "numpy",
+      "pandas",
+      "torch",
+      "tensorflow"
+    ]
+  },
+  "summary": {
+    "category:system": 25,
+    "category:builtin": 5
+  },
+  "total_matches": 30,
+  "findings": [
+    {
+      "path": "random._os",
+      "name": "_os",
+      "depth": 1,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "os",
+        "module_file": "E:\\python3\\Lib\\os.py",
+        "spec_origin": "frozen"
+      }
+    },
+    {
+      "path": "random._random",
+      "name": "_random",
+      "depth": 1,
+      "match": {
+        "kind": "category",
+        "reason": "category:builtin",
+        "rule": {
+          "type": "category",
+          "category": "builtin"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "_random",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os",
+      "name": "_os",
+      "depth": 1,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "os",
+        "module_file": "E:\\python3\\Lib\\os.py",
+        "spec_origin": "frozen"
+      }
+    },
+    {
+      "path": "random._os.execl",
+      "name": "execl",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "execl",
+        "name": "execl",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.remove",
+      "name": "remove",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "remove",
+        "name": "remove",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.popen",
+      "name": "popen",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "popen",
+        "name": "popen",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.execve",
+      "name": "execve",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "execve",
+        "name": "execve",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.spawnl",
+      "name": "spawnl",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "spawnl",
+        "name": "spawnl",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.system",
+      "name": "system",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "system",
+        "name": "system",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.execvp",
+      "name": "execvp",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "execvp",
+        "name": "execvp",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.unlink",
+      "name": "unlink",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "unlink",
+        "name": "unlink",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.chmod",
+      "name": "chmod",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "chmod",
+        "name": "chmod",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.sys",
+      "name": "sys",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "sys",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os.sys",
+      "name": "sys",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:builtin",
+        "rule": {
+          "type": "category",
+          "category": "builtin"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "sys",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os.spawnve",
+      "name": "spawnve",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "spawnve",
+        "name": "spawnve",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.execlp",
+      "name": "execlp",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "execlp",
+        "name": "execlp",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.execvpe",
+      "name": "execvpe",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "execvpe",
+        "name": "execvpe",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.spawnle",
+      "name": "spawnle",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "spawnle",
+        "name": "spawnle",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.execlpe",
+      "name": "execlpe",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "function",
+        "module": "os",
+        "qualname": "execlpe",
+        "name": "execlpe",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.open",
+      "name": "open",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "open",
+        "name": "open",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.spawnv",
+      "name": "spawnv",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "spawnv",
+        "name": "spawnv",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.rmdir",
+      "name": "rmdir",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "rmdir",
+        "name": "rmdir",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._os.execv",
+      "name": "execv",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "builtin_function_or_method",
+        "module": "nt",
+        "qualname": "execv",
+        "name": "execv",
+        "module_file": null,
+        "spec_origin": null
+      }
+    },
+    {
+      "path": "random._random",
+      "name": "_random",
+      "depth": 1,
+      "match": {
+        "kind": "category",
+        "reason": "category:builtin",
+        "rule": {
+          "type": "category",
+          "category": "builtin"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "_random",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os.sys",
+      "name": "sys",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "sys",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os.sys",
+      "name": "sys",
+      "depth": 2,
+      "match": {
+        "kind": "category",
+        "reason": "category:builtin",
+        "rule": {
+          "type": "category",
+          "category": "builtin"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "sys",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os.path.os",
+      "name": "os",
+      "depth": 3,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "os",
+        "module_file": "E:\\python3\\Lib\\os.py",
+        "spec_origin": "frozen"
+      }
+    },
+    {
+      "path": "random._os.path.sys",
+      "name": "sys",
+      "depth": 3,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "sys",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os.path.sys",
+      "name": "sys",
+      "depth": 3,
+      "match": {
+        "kind": "category",
+        "reason": "category:builtin",
+        "rule": {
+          "type": "category",
+          "category": "builtin"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "sys",
+        "module_file": null,
+        "spec_origin": "built-in"
+      }
+    },
+    {
+      "path": "random._os.path.genericpath.os",
+      "name": "os",
+      "depth": 4,
+      "match": {
+        "kind": "category",
+        "reason": "category:system",
+        "rule": {
+          "type": "category",
+          "category": "system"
+        }
+      },
+      "object": {
+        "type": "module",
+        "module": null,
+        "qualname": null,
+        "name": "os",
+        "module_file": "E:\\python3\\Lib\\os.py",
+        "spec_origin": "frozen"
+      }
+    }
+  ]
+}
