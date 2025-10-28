@@ -212,11 +212,6 @@ Saved JSON report to modscan_report.json (items written: 30/30)
 ## 🤝 Contributing
 
 Pull requests are welcome!  
-Ideas include:
-- Export to CSV/DOT for graph visualization  
-- Parallel traversal for large trees  
-- Heuristic scoring (“danger levels”)  
-- Live web UI explorer
 
 ---
 
