@@ -3,7 +3,6 @@
   <h1>ModScout</h1>
   <p><b>Scout dangerous paths in Python modules — safely.</b></p>
   <p><i>A Python module graph explorer that reveals hidden routes to sensitive modules, callables, and builtins.</i></p>
-  <p><b>Author:</b> Ivan, Johns Hopkins University</p>
   <img src="Demo.png" alt="ModScout Demo" width="720"/>
 </div>
 
